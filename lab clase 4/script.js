@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     searchInput.addEventListener("input", (e) => {
         const searchTerm = e.target.value.toLowerCase();
         const filteredUsers = users.filter(user => 
-            user.first_name.toLowerCase().includes(searchTerm)
+            user.first_name.toLowerCase().includes(searchTerm) || user.last_name.toLowerCase().includes(searchTerm)
         );
         renderUsers(filteredUsers);
     });
